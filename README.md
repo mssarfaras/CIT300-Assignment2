@@ -28,7 +28,7 @@ This Java console-based application demonstrates fundamental data structures, se
 - **Assigned Responsibility:** Array operations, searching algorithms, performance comparison, and integration.
 - **Individual Contribution:** [Describe the code and features personally implemented and tested.]
 
-### 2. J. Nisathn
+### 2. J. Nisath
 - **Student ID:** 23DA2-0684
 - **Assigned Responsibility:** Stack and queue operations.
 - **Individual Contribution:** [Describe the stack and queue features personally implemented and tested.]
