@@ -58,6 +58,22 @@ public class ArrayManager {
         System.out.println();
     }
 
+    public void displaySummary() {
+        System.out.println("\n--- Array Summary ---");
+        if (size == 0) {
+            System.out.println("Array is empty.");
+            return;
+        }
+
+        System.out.print("Array values: ");
+
+        for (int i = 0; i < size; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+
+        System.out.println();
+    }
+
     public void run(Scanner input) {
         int choice;
 

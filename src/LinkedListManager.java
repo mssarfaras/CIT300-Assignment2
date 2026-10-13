@@ -97,6 +97,24 @@ public class LinkedListManager {
         System.out.println("null");
     }
 
+    public void displaySummary() {
+        System.out.println("\n--- Linked List Summary ---");
+        if (head == null) {
+            System.out.println("Linked List is empty.");
+            return;
+        }
+
+        Node current = head;
+        System.out.print("Linked List: ");
+
+        while (current != null) {
+            System.out.print(current.data + " -> ");
+            current = current.next;
+        }
+
+        System.out.println("null");
+    }
+
     public void run(Scanner input) {
         int choice;
 

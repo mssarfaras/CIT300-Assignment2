@@ -2,9 +2,14 @@
 import java.util.Scanner;
 
 public class Main {
+    private static final ArrayManager arrayManager = new ArrayManager();
+    private static final StackManager stackManager = new StackManager();
+    private static final QueueManager queueManager = new QueueManager();
+    private static final LinkedListManager linkedListManager = new LinkedListManager();
+    private static final SearchingManager searchingManager = new SearchingManager();
+    private static final GraphManager graphManager = new GraphManager();
 
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
         int choice;
 
@@ -33,54 +38,44 @@ public class Main {
             choice = input.nextInt();
 
             switch (choice) {
-              
-case 1:
-    ArrayManager arrayManager = new ArrayManager();
-    arrayManager.run(input);
-    break;
+                case 1:
+                    arrayManager.run(input);
+                    break;
 
-case 2:
-    StackManager stackManager = new StackManager();
-    stackManager.run(input);
-    break;
+                case 2:
+                    stackManager.run(input);
+                    break;
 
-              
-               case 3: {
-    QueueManager queueManager = new QueueManager();
-    queueManager.run(input);
-    break;
-}
-               case 4: {
-    LinkedListManager linkedListManager =
-        new LinkedListManager();
-    linkedListManager.run(input);
-    break;
-}
-                case 5: {
-    SearchingManager searchingManager = new SearchingManager();
-    searchingManager.run(input);
-    break;
-}
-               
-case 6: {
-    GraphManager graphManager = new GraphManager();
-    graphManager.run(input);
-    break;
-}
+                case 3:
+                    queueManager.run(input);
+                    break;
 
-case 7: {
-    PerformanceManager performanceManager =
-            new PerformanceManager();
-    performanceManager.run(input);
-    break;
-}
+                case 4:
+                    linkedListManager.run(input);
+                    break;
+
+                case 5:
+                    searchingManager.run(input);
+                    break;
+
+                case 6:
+                    graphManager.run(input);
+                    break;
+
+                case 7: {
+                    PerformanceManager performanceManager = new PerformanceManager();
+                    performanceManager.run(input);
+                    break;
+                }
 
                 case 8:
-                    System.out.println("Results will appear here later.");
+                    displayAllResults();
                     break;
+
                 case 9:
                     System.out.println("Thank you for using the system!");
                     break;
+
                 default:
                     System.out.println("Invalid choice! Choose 1 to 9.");
             }
@@ -88,5 +83,18 @@ case 7: {
         } while (choice != 9);
 
         input.close();
+    }
+
+    private static void displayAllResults() {
+        System.out.println("\n========================================");
+        System.out.println("           DISPLAY ALL RESULTS");
+        System.out.println("========================================");
+
+        arrayManager.displaySummary();
+        stackManager.displaySummary();
+        queueManager.displaySummary();
+        linkedListManager.displaySummary();
+        searchingManager.displaySummary();
+        graphManager.displaySummary();
     }
 }

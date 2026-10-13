@@ -58,6 +58,21 @@ public class GraphManager {
         }
     }
 
+    public void displaySummary() {
+        System.out.println("\n--- Graph Summary ---");
+        if (graph.isEmpty()) {
+            System.out.println("Graph is empty.");
+            return;
+        }
+
+        System.out.println("Graph Connections:");
+        for (String vertex : graph.keySet()) {
+            System.out.println(
+                vertex + " -> " + graph.get(vertex)
+            );
+        }
+    }
+
     // Search for a vertex
     public void searchVertex(String vertex) {
         if (graph.containsKey(vertex)) {

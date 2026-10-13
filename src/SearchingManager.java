@@ -27,6 +27,17 @@ public class SearchingManager {
                 + Arrays.toString(Arrays.copyOf(numbers, size)));
     }
 
+    public void displaySummary() {
+        System.out.println("\n--- Searching Summary ---");
+        if (size == 0) {
+            System.out.println("No numbers added yet.");
+            return;
+        }
+
+        System.out.println("Numbers: "
+                + Arrays.toString(Arrays.copyOf(numbers, size)));
+    }
+
     public void linearSearch(int target) {
         int steps = 0;
 

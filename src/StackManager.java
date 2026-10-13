@@ -48,6 +48,22 @@ public class StackManager {
         }
     }
 
+    public void displaySummary() {
+        System.out.println("\n--- Stack Summary ---");
+        if (top == -1) {
+            System.out.println("Stack is empty.");
+            return;
+        }
+
+        System.out.print("Stack values (top to bottom): ");
+
+        for (int i = top; i >= 0; i--) {
+            System.out.print(stack[i] + " ");
+        }
+
+        System.out.println();
+    }
+
     public void run(Scanner input) {
         int choice;
 

@@ -55,6 +55,22 @@ public class QueueManager {
         System.out.println();
     }
 
+    public void displaySummary() {
+        System.out.println("\n--- Queue Summary ---");
+        if (size == 0) {
+            System.out.println("Queue is empty.");
+            return;
+        }
+
+        System.out.print("Queue values (front to rear): ");
+
+        for (int i = 0; i < size; i++) {
+            System.out.print(queue[(front + i) % queue.length] + " ");
+        }
+
+        System.out.println();
+    }
+
     public void run(Scanner input) {
         int choice;
 
